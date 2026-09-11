@@ -865,13 +865,14 @@
   margin-top: 8px;
 
   font-family: Arial, sans-serif;
-  font-size: 8px;
+  font-size: 13px;
   letter-spacing: 3px;
 }
 
 .map-pin {
   width: 55px;
   height: 55px;
+  cursor: pointer;
 
   margin: 20px 0;
 
@@ -882,10 +883,17 @@
   border-radius: 50%;
 
   background: #d5ae67;
-  color: #211b16;
+  color: white;
 
   font-family: Arial, sans-serif;
+  transition: all 0.5s ease;
   font-size: 25px;
+}
+
+.map-pin:active
+{
+    transform: scale(0.92);
+    transition: all 0.5s ease;
 }
 
 /* =========================================

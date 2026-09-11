@@ -63,6 +63,14 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 23px;
   font-style: italic;
+  transition: all 0.5s ease;
+}
+
+.logo-mark:hover {
+  background: #d5ae67;
+  transition: all 0.5s ease;
+  color: #211b16;
+  transform: rotate(8deg);
 }
 
 .logo-text {

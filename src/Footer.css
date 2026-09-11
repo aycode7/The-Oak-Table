@@ -1,0 +1,391 @@
+.footer {
+  background: #211b16;
+  color: #f5efe5;
+  border-top: 1px solid rgba(213, 174, 103, 0.15);
+}
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 40px 70px;
+
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr 1.2fr 1.2fr;
+  gap: 60px;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-logo-mark {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(213, 174, 103, 0.7);
+  border-radius: 50%;
+
+  color: #d5ae67;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+
+  transition: all 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-mark {
+  background: #d5ae67;
+  color: #211b16;
+  transform: rotate(8deg);
+}
+
+.footer-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  letter-spacing: 0.2px;
+}
+
+.footer-logo-tagline {
+  margin-top: 3px;
+
+  color: #9f958a;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.footer-description {
+  max-width: 320px;
+  margin: 25px 0 25px;
+
+  color: #a99f94;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   SOCIALS
+========================= */
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(245, 239, 229, 0.14);
+  border-radius: 50%;
+
+  color: #cfc5b8;
+
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  border-color: #d5ae67;
+  color: #d5ae67;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   COLUMNS
+========================= */
+
+.footer-column h3 {
+  margin: 3px 0 24px;
+
+  color: #d5ae67;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 13px;
+}
+
+.footer-column li a {
+  color: #b8afa4;
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.footer-column li a:hover {
+  color: #f5efe5;
+  padding-left: 4px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-bottom: 17px;
+
+  color: #b8afa4;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #d5ae67;
+}
+
+/* =========================
+   HOURS
+========================= */
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+
+  border-bottom: 1px solid rgba(245, 239, 229, 0.08);
+
+  color: #b8afa4;
+  font-size: 13px;
+}
+
+.hours-row span:last-child {
+  color: #e2d9cd;
+  white-space: nowrap;
+}
+
+.footer-reserve {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 17px;
+  padding: 12px 18px;
+
+  background: #d5ae67;
+  color: white;
+
+  text-decoration: none;
+
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-reserve:hover {
+  background: transparent;
+  color: #d5ae67;
+  border: 2px solid #d5ae67;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  border-top: 1px solid rgba(245, 239, 229, 0.08);
+}
+
+.footer-bottom-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #81786e;
+  font-size: 12px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-legal a {
+  color: #81786e;
+  text-decoration: none;
+  font-size: 12px;
+
+  transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
+  color: #d5ae67;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #a59b90;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.back-to-top:hover {
+  color: #d5ae67;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+  }
+
+  .footer-hours {
+    grid-column: span 1;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .footer-container {
+    padding: 60px 24px 50px;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 30px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-description {
+    max-width: 400px;
+  }
+
+  .footer-bottom-inner {
+    padding: 20px 24px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .footer-legal {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 18px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-legal {
+    order: initial;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer *,
+  .footer *::before,
+  .footer *::after {
+    transition: none !important;
+  }
+}

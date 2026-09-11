@@ -294,6 +294,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .chef-content p {
@@ -302,6 +304,8 @@
   color: #756b61;
   font-size: 15px;
   line-height: 1.9;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .about-link {

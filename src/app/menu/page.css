@@ -1,0 +1,852 @@
+.menu-page {
+  background: #f3eee4;
+  color: #241b14;
+  overflow: hidden;
+}
+
+/* =========================
+   FULL SCREEN MENU HERO
+========================= */
+
+.menu-hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: #f7f1e7;
+}
+
+.menu-hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=90");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.02);
+
+  z-index: 0;
+}
+
+.menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 13, 8, 0.88) 0%,
+      rgba(20, 13, 8, 0.58) 40%,
+      rgba(20, 13, 8, 0.18) 75%,
+      rgba(20, 13, 8, 0.35) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(20, 13, 8, 0.15) 0%,
+      rgba(20, 13, 8, 0.48) 100%
+    );
+
+  z-index: 1;
+}
+
+.menu-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding-top: 40px;
+}
+
+.menu-hero-content #pp {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 3;
+
+  right: 5%;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  font-size: 9px;
+  letter-spacing: 0.2em;
+
+  color: rgba(247, 241, 231, 0.78);
+}
+
+.hero-scroll span {
+  width: 42px;
+  height: 1px;
+
+  background: #d0a05a;
+}
+
+
+.menu-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding-top: 60px;
+}
+
+.menu-eyebrow {
+  display: block;
+  color: #d0a05a;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  margin-bottom: 27px;
+}
+
+.menu-hero h1 {
+  margin: 0;
+
+  font-size: clamp(4.5rem, 9vw, 9rem);
+  line-height: 0.84;
+
+  letter-spacing: -0.065em;
+  font-weight: 500;
+}
+
+.menu-hero h1 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.hero-line {
+  width: 42px;
+  height: 1px;
+  background: #d0a05a;
+  margin: 28px 0 23px;
+}
+
+.menu-hero p {
+  max-width: 410px;
+  margin: 0;
+
+  color: rgba(247, 241, 231, 0.78);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 2;
+
+  right: 5%;
+  bottom: 34px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  font-size: 9px;
+  letter-spacing: 0.2em;
+
+  color: rgba(247, 241, 231, 0.78);
+}
+
+.hero-scroll span {
+  display: block;
+  width: 42px;
+  height: 1px;
+  background: #d0a05a;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.menu-intro {
+  max-width: 850px;
+  margin: 0 auto;
+
+  padding: 125px 25px 100px;
+
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+
+  color: #d5ae67;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+}
+
+.menu-intro h2 {
+  margin: 20px 0 0;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.98;
+
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+.menu-intro h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.menu-intro p {
+  max-width: 610px;
+
+  margin: 28px auto 0;
+
+  color: #756b61;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================
+   SELECTION
+========================= */
+
+.menu-selection {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+
+  padding: 30px 0 125px;
+}
+
+.selection-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 50px;
+}
+
+.selection-heading h2 {
+  margin: 13px 0 0;
+
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 0.95;
+
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: -0.055em;
+}
+
+.selection-heading p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color: #756b61;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.menu-filters {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 45px 0 40px;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid rgba(36, 27, 20, 0.14);
+}
+
+.menu-filters button {
+  border: 1px solid #cdbfae;
+  background: transparent;
+
+  color: #554a41;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  padding: 10px 22px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.menu-filters button:hover {
+  border-color: #2b2018;
+  color: #2b2018;
+}
+
+.menu-filters button.active {
+  background: #2b2018;
+  border-color: #2b2018;
+  color: #f7f1e7;
+}
+
+/* =========================
+   DISH GRID
+========================= */
+
+.dish-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 45px 20px;
+}
+
+.dish-card {
+  min-width: 0;
+}
+
+.dish-image {
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+
+  overflow: hidden;
+
+  background: #ded5c8;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.dish-card:hover .dish-image img {
+  transform: scale(1.055);
+}
+
+.dish-image span {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  font-weight: bold;
+
+  padding: 7px 10px;
+
+  background: rgba(247, 241, 231, 0.95);
+
+  color: #d5ae67;
+
+  font-size: 11px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  letter-spacing: 0.18em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  text-transform: uppercase;
+}
+
+.dish-details {
+  padding-top: 13px;
+}
+
+.dish-title-row {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.dish-title-row h3 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+}
+
+.dish-title-row strong {
+  color: #765326;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.dish-details p {
+  margin: 7px 0 0;
+
+  color: #756b61;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 650px;
+
+  background: #2a1d14;
+  color: #f7f1e7;
+}
+
+.signature-image {
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.signature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.signature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px clamp(35px, 7vw, 110px);
+}
+
+.signature-content > span {
+  color: #d1a35b;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.signature-content h2 {
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 0.95;
+
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.signature-content h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.signature-content p {
+  max-width: 470px;
+  margin: 30px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  color: rgba(247, 241, 231, 0.7);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.signature-price {
+  color: #d1a35b;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.menu-cta-button {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 15px 21px;
+
+  border: 1px solid #d5ae67;
+  border-radius: 5px;
+
+  color: #d5ae67;
+  text-decoration: none;
+
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+.menu-cta-button span {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.menu-cta-button:hover {
+  background: #b98a45;
+  color: white;
+}
+
+.menu-cta-button:hover span {
+  transform: translate(4px, -4px);
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.menu-note {
+  width: min(800px, 82%);
+
+  margin: 0 auto;
+
+  padding: 80px 0;
+}
+
+.note-line {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(36, 27, 20, 0.13);
+}
+
+.menu-note p {
+  max-width: 570px;
+
+  margin: 20px auto;
+
+  text-align: center;
+
+  color: #756b61;
+
+  font-size: 17px;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.menu-cta {
+  min-height: 520px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  color: #f7f1e7;
+
+  background-image: url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2200&q=90");
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-cta-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(25, 16, 10, 0.78);
+}
+
+.menu-cta-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(700px, 90%);
+}
+
+.menu-cta-content .section-eyebrow {
+  color: #d0a05a;
+}
+
+.menu-cta h2 {
+  margin: 17px 0 0;
+
+  font-size: clamp(3.2rem, 6vw, 6rem);
+
+  line-height: 0.9;
+
+  font-weight: 500;
+
+  letter-spacing: -0.06em;
+}
+
+.menu-cta h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.menu-cta p {
+  max-width: 430px;
+
+  margin: 22px auto 30px;
+
+  color: rgba(247, 241, 231, 0.72);
+
+  font-size: 16px;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  line-height: 1.8;
+}
+
+.menu-cta .gold-button
+{
+    background-color: transparent;
+    border: 2px solid #d5ae67;
+    padding: 15px  20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #d5ae67;
+    font-weight: bold;
+
+}
+
+.menu-cta .gold-button:hover
+{
+    background-color: #d5ae67;
+    color: white;
+    transition: all 0.5s ease;
+    transform: scale(0.95);
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .dish-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 24px;
+  }
+
+  .signature {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .signature-content {
+    padding: 45px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .menu-hero {
+    min-height: 78svh;
+  }
+
+  .menu-hero-content {
+    width: 86%;
+    padding-top: 30px;
+  }
+
+  .menu-hero h1 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .menu-hero p {
+    max-width: 320px;
+    font-size: 13px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .menu-intro {
+    padding: 90px 20px 75px;
+  }
+
+  .menu-intro h2 {
+    font-size: 2.8rem;
+  }
+
+  .menu-selection {
+    width: 88%;
+    padding-bottom: 90px;
+  }
+
+  .selection-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  .selection-heading h2 {
+    font-size: 3rem;
+  }
+
+  .selection-heading p {
+    max-width: 330px;
+  }
+
+  .menu-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+    padding-bottom: 15px;
+
+    scrollbar-width: none;
+  }
+
+  .menu-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-filters button {
+    flex-shrink: 0;
+  }
+
+  .dish-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .dish-image {
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .dish-title-row h3 {
+    font-size: 18px;
+  }
+
+  .dish-title-row strong {
+    font-size: 12px;
+  }
+
+  .dish-details p {
+    font-size: 11px;
+  }
+
+  .signature {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .signature-image {
+    min-height: 330px;
+  }
+
+  .signature-content {
+    padding: 60px 8%;
+  }
+
+  .signature-content h2 {
+    font-size: 3.1rem;
+  }
+
+  .menu-note {
+    padding: 70px 0;
+  }
+
+  .menu-cta {
+    min-height: 500px;
+  }
+
+  .menu-cta h2 {
+    font-size: 3.6rem;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+  .menu-hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .menu-hero {
+    height: 100svh;
+    min-height: 600px;
+  }
+
+  .menu-intro h2 {
+    font-size: 2.45rem;
+  }
+
+  .selection-heading h2 {
+    font-size: 2.7rem;
+  }
+
+  .menu-cta h2 {
+    font-size: 3rem;
+  }
+}

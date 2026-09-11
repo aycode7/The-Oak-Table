@@ -1,12 +1,16 @@
+
+
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,19 +42,35 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link href="/" onClick={closeMenu}>
+          <Link
+            href="/"
+            className={pathname === "/" ? "active" : ""}
+            onClick={closeMenu}
+          >
             Home
           </Link>
 
-          <Link href="/menu" onClick={closeMenu}>
+          <Link
+            href="/menu"
+            className={pathname === "/menu" ? "active" : ""}
+            onClick={closeMenu}
+          >
             Menu
           </Link>
 
-          <Link href="/about" onClick={closeMenu}>
+          <Link
+            href="/about"
+            className={pathname === "/about" ? "active" : ""}
+            onClick={closeMenu}
+          >
             About
           </Link>
 
-          <Link href="/contact" onClick={closeMenu}>
+          <Link
+            href="/contact"
+            className={pathname === "/contact" ? "active" : ""}
+            onClick={closeMenu}
+          >
             Contact
           </Link>
 
@@ -97,3 +117,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

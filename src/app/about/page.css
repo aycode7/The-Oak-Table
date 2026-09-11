@@ -1,0 +1,641 @@
+/* =========================================
+   THE OAKTABLE — ABOUT
+========================================= */
+
+.about-page {
+  background: #f5efe5;
+  color: #211b16;
+  overflow: hidden;
+}
+
+.about-container {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+  height: 88vh;
+  min-height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #f5efe5;
+}
+
+.about-hero-bg,
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.about-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(25, 18, 13, 0.25),
+      rgba(25, 18, 13, 0.78)
+    );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 30px;
+  text-align: center;
+}
+
+.about-kicker {
+  display: block;
+  margin-bottom: 25px;
+  color: #d5ae67;
+  font-size: 10px;
+  letter-spacing: 5px;
+}
+
+.about-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(75px, 11vw, 145px);
+  font-weight: 400;
+  line-height: 0.82;
+}
+
+.about-hero-content p {
+  max-width: 570px;
+  margin: 35px auto 0;
+  color: #d8cec2;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-hero-bottom {
+  position: absolute;
+  z-index: 3;
+  left: 40px;
+  right: 40px;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: #c1b5a8;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.about-intro {
+  padding: 155px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 0.55fr 1.65fr;
+  gap: 90px;
+}
+
+.intro-number {
+  display: flex;
+  gap: 14px;
+  padding-top: 12px;
+  color: #918477;
+}
+
+.intro-number span {
+  color: #d5ae67;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.intro-number p {
+  margin: 2px 0;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.section-label {
+  display: inline-block;
+  color: #a48b68;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.intro-content h2,
+.philosophy-heading h2,
+.chef-content h2,
+.values-heading h2 {
+  margin: 23px 0 35px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 5.5vw, 75px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.intro-content h2 em,
+.philosophy-heading h2 em,
+.chef-content h2 em,
+.values-heading h2 em,
+.final-cta-content h2 em {
+  color: #9b7846;
+  font-style: italic;
+}
+
+.intro-content p {
+  max-width: 700px;
+  margin: 0 0 18px;
+  color: #756b61;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   LARGE IMAGE
+========================================= */
+
+.about-image-section {
+  padding: 0 40px 150px;
+}
+
+.about-large-image {
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.about-large-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-caption {
+  position: absolute;
+  left: 45px;
+  bottom: 40px;
+  color: #f5efe5;
+}
+
+.image-caption span {
+  display: block;
+  margin-bottom: 8px;
+  color: #d5ae67;
+  font-size: 19px;
+  letter-spacing: 4px;
+}
+
+.image-caption p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+}
+
+
+/* =========================================
+   PHILOSOPHY
+========================================= */
+
+.philosophy-section {
+  padding: 145px 0;
+  background: #211b16;
+  color: #f5efe5;
+}
+
+.philosophy-section .section-label {
+  color: #d5ae67;
+}
+
+.philosophy-heading h2 {
+  margin-bottom: 80px;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(245, 239, 229, 0.15);
+}
+
+.philosophy-card {
+  min-height: 300px;
+  padding: 40px 40px 40px 0;
+  border-right: 1px solid rgba(245, 239, 229, 0.15);
+}
+
+.philosophy-card:not(:first-child) {
+  padding-left: 40px;
+}
+
+.philosophy-card:last-child {
+  border-right: none;
+}
+
+.philosophy-card > span {
+  color: #d5ae67;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.philosophy-card h3 {
+  margin: 65px 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.philosophy-card p {
+  max-width: 280px;
+  margin: 0;
+  color: #a99f94;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   CHEF
+========================================= */
+
+.chef-section {
+  padding: 155px 0;
+  background: #eee6da;
+}
+
+.chef-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.chef-image {
+  height: 650px;
+  overflow: hidden;
+}
+
+.chef-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chef-content p {
+  max-width: 500px;
+  margin: 0 0 20px;
+  color: #756b61;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d5ae67;
+  color: #211b16;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.about-link span {
+  color: #b18a4e;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.about-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.about-quote {
+  padding: 175px 30px;
+  text-align: center;
+  background: #f5efe5;
+}
+
+.quote-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.quote-symbol {
+  display: block;
+  color: #d5ae67;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 85px;
+  line-height: 0.5;
+}
+
+.quote-content h2 {
+  margin: 40px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 5vw, 65px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.quote-line {
+  width: 45px;
+  height: 1px;
+  margin: 35px auto 20px;
+  background: #d5ae67;
+}
+
+.quote-content > span:last-child {
+  color: #918477;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.values-section {
+  padding: 145px 0;
+  background: #eee6da;
+}
+
+.values-heading {
+  margin-bottom: 80px;
+}
+
+.values-list {
+  border-top: 1px solid rgba(33, 27, 22, 0.18);
+}
+
+.value-row {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(33, 27, 22, 0.18);
+}
+
+.value-row > span {
+  color: #b18a4e;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.value-row h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.value-row p {
+  margin: 0;
+  color: #81766b;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.about-final-cta {
+  height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #f5efe5;
+  text-align: center;
+}
+
+.final-cta-bg,
+.final-cta-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.final-cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.final-cta-overlay {
+  background: rgba(25, 18, 13, 0.72);
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding: 30px;
+}
+
+.final-cta-content .section-label {
+  color: #d5ae67;
+}
+
+.final-cta-content h2 {
+  margin: 23px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 400;
+  line-height: 1.03;
+}
+
+.final-cta-content p {
+  margin: 0 0 35px;
+  color: #c8bdb0;
+  font-size: 15px;
+}
+
+.final-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 15px 23px;
+  background: #d5ae67;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.final-cta-button span {
+  font-size: 17px;
+}
+
+.final-cta-button:hover {
+  background: transparent;
+  color: #d5ae67;
+  border: 2px solid #d5ae67;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-container {
+    width: min(100% - 48px, 700px);
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-intro,
+  .philosophy-section,
+  .chef-section,
+  .values-section {
+    padding: 100px 0;
+  }
+
+  .about-image-section {
+    padding: 0 24px 100px;
+  }
+
+  .about-large-image {
+    height: 500px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-card,
+  .philosophy-card:not(:first-child) {
+    min-height: auto;
+    padding: 35px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(245, 239, 229, 0.15);
+  }
+
+  .philosophy-card:last-child {
+    border-bottom: none;
+  }
+
+  .philosophy-card h3 {
+    margin-top: 35px;
+  }
+
+  .chef-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .chef-image {
+    height: 550px;
+  }
+
+  .value-row {
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  .value-row p {
+    grid-column: 2;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .about-hero {
+    height: 80vh;
+    min-height: 560px;
+  }
+
+  .about-hero h1 {
+    font-size: 68px;
+  }
+
+  .about-hero-content p {
+    font-size: 14px;
+  }
+
+  .about-hero-bottom {
+    left: 24px;
+    right: 24px;
+  }
+
+  .about-hero-bottom span:last-child {
+    display: none;
+  }
+
+  .intro-content h2,
+  .philosophy-heading h2,
+  .chef-content h2,
+  .values-heading h2 {
+    font-size: 43px;
+  }
+
+  .about-large-image {
+    height: 420px;
+  }
+
+  .image-caption {
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .chef-image {
+    height: 430px;
+  }
+
+  .about-quote {
+    padding: 110px 24px;
+  }
+
+  .quote-content h2 {
+    font-size: 38px;
+  }
+
+  .value-row {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+  }
+
+  .value-row p {
+    grid-column: 2;
+  }
+
+  .about-final-cta {
+    height: 570px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 46px;
+  }
+}

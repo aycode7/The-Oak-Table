@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { Resend } from "resend";
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY
 );
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
@@ -110,6 +113,61 @@ export async function POST(request) {
     });
   } catch (error) {
     console.error("Order API error:", error);
+
+    try {
+    await resend.emails.send({
+        from: "TheOakTable <onboarding@resend.dev>",
+        to: process.env.OWNER_EMAIL,
+        subject: `New Order ${orderNumber}`,
+        html: `
+        <h2>New Order Received 🍽️</h2>
+
+        <p><strong>Order:</strong> ${orderNumber}</p>
+        <p><strong>Customer:</strong> ${customer.name}</p>
+        <p><strong>Phone:</strong> ${customer.phone}</p>
+        <p><strong>Type:</strong> ${customer.orderType}</p>
+
+        ${
+            customer.orderType === "Delivery"
+            ? `<p><strong>Address:</strong> ${customer.address}</p>`
+            : ""
+        }
+
+        <h3>Items</h3>
+
+        <ul>
+            ${cart
+            .map(
+                (item) =>
+                `<li>${item.quantity} × ${item.name} — ₦${(
+                    item.price * item.quantity
+                ).toLocaleString()}</li>`
+            )
+            .join("")}
+        </ul>
+
+        <p><strong>Subtotal:</strong> ₦${Number(
+            subtotal
+        ).toLocaleString()}</p>
+
+        <p><strong>Delivery:</strong> ₦${Number(
+            deliveryFee
+        ).toLocaleString()}</p>
+
+        <h2>Total: ₦${Number(total).toLocaleString()}</h2>
+
+        ${
+            customer.note
+            ? `<p><strong>Customer note:</strong> ${customer.note}</p>`
+            : ""
+        }
+
+        <p>Log in to the TheOakTable admin dashboard to manage this order.</p>
+        `,
+    });
+    } catch (emailError) {
+    console.error("Order notification email failed:", emailError);
+    }
 
     return NextResponse.json(
       { error: "Something went wrong while placing your order." },

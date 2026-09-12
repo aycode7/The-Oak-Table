@@ -45,15 +45,17 @@ const page = () => {
     } catch (error) {
       console.error("Could not save cart:", error);
     }
+  }, [cart, cartLoaded]);
 
+  useEffect(() => {
     Aos.init({
       duration: 800,
       once: false,
       offset: 100,
       easing: "ease-out-cubic",
+    });
   }, []);
 
-  }, [cart, cartLoaded]);
 
   const categories = ["All", "Starters", "Mains", "Desserts", "Drinks"];
 

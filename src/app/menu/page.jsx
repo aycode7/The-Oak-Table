@@ -227,44 +227,56 @@ const page = () => {
     }));
   };
 
-  const handleCheckout = (e) => {
+  const handleCheckout = async (e) => {
     e.preventDefault();
 
-    /*
-      IMPORTANT:
-      This currently demonstrates the complete checkout experience.
+    if (cart.length === 0) {
+      return;
+    }
 
-      Next step:
-      We'll connect this function to Supabase so the order is
-      actually saved and becomes visible to you as the restaurant owner.
-    */
+    try {
+      const response = await fetch("/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          customer,
+          cart,
+          subtotal,
+          deliveryFee,
+          total,
+        }),
+      });
 
-    const orderNumber = `OT-${Math.floor(
-      100000 + Math.random() * 900000
-    )}`;
+      const data = await response.json();
 
-    console.log("NEW THE OAK TABLE ORDER:", {
-      orderNumber,
-      customer,
-      items: cart,
-      subtotal,
-      deliveryFee,
-      total,
-    });
+      if (!response.ok) {
+        throw new Error(data.error || "Could not place your order.");
+      }
 
-    setCart([]);
-    setCheckoutOpen(false);
-    setCartOpen(false);
-    setOrderPlaced(orderNumber);
+      setCart([]);
+      setCheckoutOpen(false);
+      setCartOpen(false);
+      setOrderPlaced(data.orderNumber);
 
-    setCustomer({
-      name: "",
-      phone: "",
-      orderType: "Pickup",
-      address: "",
-      note: "",
-    });
+      setCustomer({
+        name: "",
+        phone: "",
+        orderType: "Pickup",
+        address: "",
+        note: "",
+      });
+    } catch (error) {
+      console.error("Checkout error:", error);
+
+      alert(
+        error.message ||
+          "Something went wrong while placing your order. Please try again."
+      );
+    }
   };
+
 
   return (
     <main className="menu-page">

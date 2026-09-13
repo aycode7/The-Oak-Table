@@ -841,6 +841,7 @@ const page = () => {
 
                   <button
                     type="submit"
+                    disabled="placingOrder"
                     className="place-order-button"
                   >
                     Place Order

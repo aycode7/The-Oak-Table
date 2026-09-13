@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
+import { dishes } from "@/lib/menu";
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -49,6 +50,38 @@ export async function POST(request) {
       );
     }
 
+    const verifiedCart = cart.map((item) => {
+    const dish = dishes.find((d) => d.id === Number(item.id));
+
+    if (!dish) {
+      throw new Error("Invalid menu item.");
+    }
+
+    const quantity = Number(item.quantity);
+
+    if (!Number.isInteger(quantity) || quantity < 1) {
+      throw new Error("Invalid quantity.");
+    }
+
+    return {
+      id: dish.id,
+      name: dish.name,
+      price: dish.price,
+      quantity,
+    };
+  });
+
+  const verifiedSubtotal = verifiedCart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+
+  const verifiedDeliveryFee =
+    customer.orderType === "Delivery" ? 3000 : 0;
+
+  const verifiedTotal =
+    verifiedSubtotal + verifiedDeliveryFee;
+
     const orderNumber = `OT-${Date.now().toString().slice(-6)}`;
 
     const { data: order, error: orderError } = await supabaseAdmin
@@ -63,9 +96,9 @@ export async function POST(request) {
             ? customer.address.trim()
             : null,
         note: customer.note?.trim() || null,
-        subtotal,
-        delivery_fee: deliveryFee,
-        total,
+        subtotal: verifiedSubtotal,
+        delivery_fee: verifiedDeliveryFee,
+        total: verifiedTotal,
       })
       .select()
       .single();
@@ -79,7 +112,7 @@ export async function POST(request) {
       );
     }
 
-    const orderItems = cart.map((item) => ({
+    const orderItems = verifiedCart.map((item) => ({
       order_id: order.id,
       dish_id: item.id,
       dish_name: item.name,

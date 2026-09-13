@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import { BiCart } from "react-icons/bi";
 
 const page = () => {
+  const [placingOrder, setPlacingOrder] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   const [cart, setCart] = useState([]);
   const [cartLoaded, setCartLoaded] = useState(false);
@@ -230,7 +231,12 @@ const page = () => {
   const handleCheckout = async (e) => {
     e.preventDefault();
 
+    if (placingOrder) return;
+
+    setPlacingOrder(true);
+
     if (cart.length === 0) {
+      setPlacingOrder(false);
       return;
     }
 
@@ -274,6 +280,8 @@ const page = () => {
         error.message ||
           "Something went wrong while placing your order. Please try again."
       );
+    }finally {
+      setPlacingOrder(false);
     }
   };
 
@@ -841,11 +849,11 @@ const page = () => {
 
                   <button
                     type="submit"
-                    disabled="placingOrder"
                     className="place-order-button"
+                    disabled={placingOrder}
                   >
-                    Place Order
-                    <span>→</span>
+                    {placingOrder ? "Placing Order..." : "Place Order"}
+                    {!placingOrder && <span>→</span>}
                   </button>
 
                   <p className="checkout-note">
